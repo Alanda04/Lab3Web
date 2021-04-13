@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HTML Lanjutan</title>
+</head>
+<body>
+<style>
+ form p > label {
+ display: inline-block;
+ width: 100px;
+ }
+ form input[type="text"], form textarea {
+ border: 1px solid #197a43;
+ }
+ form input[type="submit"] {
+ border: 1px solid #197a43;
+ background-color: #197a43;
+ color: #ffffff;
+ font-weight: bold;
+ padding: 5px 15px;
+ }
+ body {
+ font-family: verdana;
+ font-size: 0.85em;
+}
+
+.menu {
+ display: block;
+ background-color:#00A6BB;
+ height:46px;
+}
+
+.content {
+ clear: both;
+ padding:5px 0;
+ min-height: 200px;
+
+}
+
+.footer {
+ clear: both;
+ margin-top:10px;
+ background-color: #eee;
+ padding:10px 8px;
+}
+
+#navigasi {
+ position:relative;
+ line-height:30px;
+ margin:0;
+ padding:0;
+ list-style-type:none;
+ list-style-position:outside;
+}
+
+#navigasi a {
+ display:block;
+ padding:8px 16px;
+ background-color:#00A6BB;
+ color:#fff;
+ text-decoration:none;
+}
+
+#navigasi a:hover {
+ background-color:#00BCD4;
+ color:#fff;
+}
+
+#navigasi li {
+ position:relative;
+ float:left;
+}
+
+#navigasi ul {
+ position:absolute;
+ display:none;
+ margin:0;
+ padding:0;
+ list-style-type:none;
+ list-style-position:outside;
+}
+
+#navigasi li ul a{
+ width:12em;
+ height:auto;
+ float:left;
+}
+
+#navigasi li:hover ul{
+ display:block;
+}
+
+#navigasi li:hover ul ul{
+ display:none;
+}
+</style>
+ <header>
+ <h1>Membuat Form</h1>
+ <div class="menu">
+<ul id="navigasi">
+ <li><a href="index.php">Home</a></li>
+ <li><a href="index.php">Tentang HTML</a></li>
+ <li><a href="#">Halaman</a>
+  <ul>
+   <li><a href="index.php">International</a></li>
+   <li><a href="index.php">National</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+ </header>
+ <form action="proses.php" method="post">
+ <fieldset>
+ <legend>Data Pelanggan</legend>
+ <p>
+ <label for="nama">Nama</label>
+ <input type="text" id="nama" name="nama">
+ </p>
+ <p>
+ <label for="alamat">Alamat</label>
+ <textarea id="alamat" name="alamat" cols="20" rows="3"></textarea>
+ </p>
+ <p>
+ <label>Jenis Kelamin</label>
+ <input id="jk_l" type="radio" name="kelamin" value="L" /><label
+for="jk_l">Laki-laki</label>
+ <input id="jk_p" type="radio" name="kelamin" value="P" /><label
+ for="jk_p">Perempuan</label>
+ </p>
+ <form method="get">
+      <p>Agama
+	  <select name='agama'>
+		<option value='islam'>Islam</option>
+		<option value='kristen' selected='selected'>Kristen</option>
+		<option value='katholik'>Katholik</option>
+		<option value='hindu'>Hindu</option>
+		<option value='kristen'>Budha</option>
+	  </select>
+	  </p>
+ <p><input type="submit" value="Login"></p>
+ </fieldset>
+</form>
+</body>
+</html>
